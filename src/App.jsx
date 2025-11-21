@@ -1,13 +1,17 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Work from './components/Work'
+import ScrollScenes from './components/ScrollScenes'
+import AjaxGallery from './components/AjaxGallery'
 import Skills from './components/Skills'
 import About from './components/About'
 import Contact from './components/Contact'
+import CursorGlow from './components/CursorGlow'
+import PageLoader from './components/PageLoader'
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-slate-950">
+    <div className="relative min-h-screen bg-slate-950 overflow-hidden">
+      <PageLoader />
       {/* Global purple/lofi vibes */}
       <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden">
         <div className="absolute left-1/2 top-[-15%] h-[700px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(168,85,247,0.22),transparent)] blur-3xl" />
@@ -16,9 +20,11 @@ function App() {
       </div>
 
       <Navbar />
+      <CursorGlow />
       <main className="relative z-10">
         <Hero />
-        <Work />
+        <ScrollScenes />
+        <AjaxGallery />
         <Skills />
         <About />
         <Contact />
