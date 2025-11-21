@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Menu, X, Rocket, Mail, Github, Linkedin } from 'lucide-react'
+import { Menu, X, Rocket, Mail, Github, Linkedin, Sparkles } from 'lucide-react'
 
 function NavLink({ href, children, onClick }) {
   return (
     <a
       href={href}
       onClick={onClick}
-      className="text-slate-200 hover:text-white/90 transition-colors"
+      className="text-slate-200 hover:text-white transition-colors"
     >
       {children}
     </a>
@@ -24,7 +24,8 @@ export default function Navbar() {
         <div className="mt-4 rounded-2xl border border-white/10 bg-slate-900/70 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60">
           <div className="flex items-center justify-between px-4 py-3">
             <a href="#home" className="group inline-flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-lg shadow-blue-500/25 ring-1 ring-white/10">
+              <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/25 ring-1 ring-white/10 overflow-hidden">
+                <span className="absolute inset-0 blur-xl opacity-40 bg-[conic-gradient(from_180deg,theme(colors.violet.400),theme(colors.fuchsia.400),theme(colors.indigo.500))] animate-spin [animation-duration:6s]" />
                 <Rocket size={18} />
               </span>
               <div className="leading-tight">
@@ -38,7 +39,7 @@ export default function Navbar() {
               <NavLink href="#skills">Skills</NavLink>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#contact">Contact</NavLink>
-              <a href="mailto:hello@alexrivera.design" className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-1.5 text-white hover:bg-white/15 border border-white/10">
+              <a href="mailto:hello@alexrivera.design" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-violet-500 to-fuchsia-500 px-3 py-1.5 text-white hover:from-violet-400 hover:to-fuchsia-400 border border-white/10 shadow-lg shadow-fuchsia-500/20">
                 <Mail size={16} /> Hire me
               </a>
             </nav>
@@ -68,6 +69,7 @@ export default function Navbar() {
           )}
         </div>
       </div>
+      <div className="pointer-events-none absolute inset-x-0 -bottom-24 h-24 bg-gradient-to-b from-transparent to-slate-950" />
     </header>
   )
 }

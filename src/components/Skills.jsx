@@ -13,7 +13,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="relative py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(600px_200px_at_10%_0%,rgba(56,189,248,0.15),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(600px_220px_at_10%_0%,rgba(139,92,246,0.18),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-6 mb-10">
           <div>
@@ -37,8 +37,10 @@ export default function Skills() {
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
             >
               <div className="flex items-start justify-between">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/80 to-cyan-400/80 text-white shadow ring-1 ring-white/10">
-                  <Icon size={20} />
+                <div className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl text-white">
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-violet-500/80 to-fuchsia-400/80" />
+                  <div className="absolute -inset-3 rounded-2xl bg-fuchsia-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Icon size={20} className="relative" />
                 </div>
                 <span className="text-xs text-slate-400">{level}</span>
               </div>
@@ -48,7 +50,8 @@ export default function Skills() {
                   <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-white/80">{t}</span>
                 ))}
               </div>
-              <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* glow orb */}
+              <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-fuchsia-400/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>

@@ -8,9 +8,11 @@ import Contact from './components/Contact'
 function App() {
   return (
     <div className="relative min-h-screen bg-slate-950">
-      <div className="pointer-events-none fixed inset-0 -z-0">
-        <div className="absolute left-1/2 top-[-10%] h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(59,130,246,0.18),transparent)] blur-2xl" />
-        <div className="absolute right-[-10%] top-[20%] h-[500px] w-[700px] rounded-full bg-[radial-gradient(closest-side,rgba(6,182,212,0.18),transparent)] blur-2xl" />
+      {/* Global purple/lofi vibes */}
+      <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden">
+        <div className="absolute left-1/2 top-[-15%] h-[700px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(168,85,247,0.22),transparent)] blur-3xl" />
+        <div className="absolute right-[-10%] top-[30%] h-[520px] w-[720px] rounded-full bg-[radial-gradient(closest-side,rgba(236,72,153,0.16),transparent)] blur-2xl" />
+        <div className="aurora absolute -bottom-40 left-1/2 h-[700px] w-[700px] -translate-x-1/2 opacity-70" />
       </div>
 
       <Navbar />

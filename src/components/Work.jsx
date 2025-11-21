@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Orbit — SaaS Dashboard',
     description: 'Clean, data-forward design with delightful hover details.',
-    image: 'https://images.unsplash.com/photo-1662242742653-13f0f76de431?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxPcmJpdCUyMCVFMiU4MCU5NCUyMFNhYVMlMjBEYXNoYm9hcmR8ZW58MHwwfHx8MTc2MzczOTE4OXww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1662242742653-13f0f76de431?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxOZWFyJTIwc3RhcnMlMjBzYWFzJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2Mzc0NzE4NQ&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
     tags: ['Dashboard', 'Design System', 'UX'],
     link: '#'
   }
@@ -27,7 +27,7 @@ const projects = [
 export default function Work() {
   return (
     <section id="work" className="relative py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(600px_200px_at_90%_0%,rgba(14,165,233,0.12),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(600px_240px_at_90%_0%,rgba(168,85,247,0.18),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-6 mb-10">
           <div>
@@ -48,8 +48,10 @@ export default function Work() {
               viewport={{ once: true, amount: 0.2 }}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5"
             >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={p.image} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src={p.image} alt={p.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                {/* lo-fi purple glow */}
+                <div className="pointer-events-none absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl bg-[radial-gradient(closest-side,rgba(217,70,239,0.18),transparent)]" />
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-2 flex-wrap">
@@ -61,6 +63,8 @@ export default function Work() {
                 <p className="text-slate-300/80 text-sm mt-1">{p.description}</p>
               </div>
               <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-slate-900/40 to-transparent" />
+              {/* Shine sweep */}
+              <div className="pointer-events-none absolute inset-y-0 -left-1 w-1/3 -skew-x-12 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-120%] group-hover:translate-x-[260%] transition-transform duration-700" />
             </motion.a>
           ))}
         </div>
